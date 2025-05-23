@@ -47,6 +47,7 @@ class LocalBRMaster(EvaluatorMasterBase):
                 self._eval_agent.set_stack_size(stack_size=stack_size)
                 if self._eval_agent.can_compute_mode():
                     expl = self._compute_br_heads_up(stack_size_idx=stack_size_idx, iter_nr=iter_nr)
+                    print("exploitability", iter_nr, expl)
                     self._log_results(iter_nr=iter_nr, agent_mode=mode, stack_size_idx=stack_size_idx, score=expl)
 
                 if self._is_multi_stack:

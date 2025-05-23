@@ -151,12 +151,12 @@ class DriverBase(WorkerBase):
                                  self._rlbr_ps),
             ])
 
-        self.crayon = CrayonWrapper(name=t_prof.name, chief_handle=self.chief_handle,
-                                    path_log_storage=self._t_prof.path_log_storage,
-                                    crayon_server_address=t_prof.local_crayon_server_docker_address,
-                                    runs_distributed=t_prof.DISTRIBUTED,
-                                    runs_cluster=t_prof.CLUSTER,
-                                    )
+        # self.crayon = CrayonWrapper(name=t_prof.name, chief_handle=self.chief_handle,
+        #                             path_log_storage=self._t_prof.path_log_storage,
+        #                             crayon_server_address=t_prof.local_crayon_server_docker_address,
+        #                             runs_distributed=t_prof.DISTRIBUTED,
+        #                             runs_cluster=t_prof.CLUSTER,
+        #                             )
 
     def _maybe_load_checkpoint_init(self):
         if self._step_to_import is None:

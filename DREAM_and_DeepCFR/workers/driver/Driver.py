@@ -96,8 +96,8 @@ class Driver(DriverBase):
             # """"""""""""""""
             # Log
             # """"""""""""""""
-            if self._iteration % self._t_prof.log_export_freq == 0:
-                self.save_logs()
+            # if self._iteration % self._t_prof.log_export_freq == 0:
+            #     self.save_logs()
             self.periodically_export_eval_agent()
 
             # """"""""""""""""

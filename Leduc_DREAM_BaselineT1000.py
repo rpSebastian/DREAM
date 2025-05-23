@@ -10,7 +10,7 @@ if __name__ == '__main__':
         name="SD-Leduc_DREAM_BaselineT1000_v001_SEED" + str(np.random.randint(1000000)),
         nn_type="feedforward",
 
-        n_batches_adv_training=SDCFR_LEDUC_BATCHES,
+        n_batches_adv_training=750,
         periodic_restart=SDCFR_LEDUC_PERIOD,
         n_traversals_per_iter=SDCFR_LEDUC_TRAVERSALS_OS,
         sampler="learned_baseline",
@@ -22,6 +22,6 @@ if __name__ == '__main__':
         DISTRIBUTED=False,
     ),
         eval_methods={
-            "br": 3,
+            "br": 1,
         })
     ctrl.run()
